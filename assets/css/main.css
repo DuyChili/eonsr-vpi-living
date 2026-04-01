@@ -374,6 +374,11 @@ body {
     border-radius: 4px;
     margin-bottom: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.6s ease;
+
+}
+.article-card:hover .article-card-img {
+    transform: scale(1.05);
 }
 
 .article-meta {
@@ -1270,9 +1275,13 @@ body {
     margin-bottom: 0;
 }
 .homentor-card .homentor-card-img-wrapper img, .homentor-main-vid img {
-    height: auto !important; /* Ghi đè cái 160px bị fix cứng trong HTML */
-    aspect-ratio: 16 / 9; /* Tự động giữ tỷ lệ ảnh video chuẩn */
-    object-fit: cover; /* Tránh bị méo hình */
+    height: auto !important; 
+    aspect-ratio: 16 / 9; 
+    object-fit: cover; 
+    transition: transform 0.6s ease;
+}
+.homentor-card:hover .homentor-card-img-wrapper img, .homentor-main-vid:hover img {
+    transform: scale(1.05);
 }
 .splide__slide img {
     height: auto !important;
