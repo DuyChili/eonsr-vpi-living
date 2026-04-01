@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Connection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <div class="nav-left-mobile">
+                <div class="custom-toggler" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span></span>
+                    <span></span>
+                </div>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/Logo LVC 1.png" alt="Living Connection" class="logo-light"
+                        onerror="this.src='https://via.placeholder.com/150x40/E0752D/fff?text=Living+Connection'">
+                    <img src="assets/images/Logo LVC 1 text dark.png" alt="Living Connection" class="logo-dark"
+                        onerror="this.src='https://via.placeholder.com/150x40/fff/333?text=Living+Connection'">
+                </a>
+            </div>
+
+            <div class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="#">Hành trình mua nhà <i class="bi bi-chevron-down"></i></a></li>
+                    <li><a class="nav-link" href="#">Từ nhà ra tiền <i class="bi bi-chevron-down"></i></a></li>
+                    <li><a class="nav-btn nav-btn-orange" href="#">Homentor</a></li>
+                    <li><a class="nav-btn nav-btn-white" href="#">Sống gắn kết</a></li>
+                    <li><a class="nav-btn nav-btn-white" href="#">Lá số BĐS</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-icons">
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-search"></i>
+                <i class="bi bi-person-circle profile-icon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="offcanvas offcanvas-start offcanvas-mobile-menu" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header pb-0">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="list-unstyled mt-3 mb-auto">
+                <li><a href="#" class="mobile-nav-link">Hành trình mua nhà</a></li>
+                <li><a href="#" class="mobile-nav-link">Từ nhà ra tiền</a></li>
+                <li class="mt-4"><a href="#"
+                        class="nav-btn nav-btn-orange w-100 justify-content-center mb-3 text-white">Homentor</a></li>
+                <li><a href="#" class="nav-btn nav-btn-white w-100 justify-content-center border mb-3 text-dark">Sống
+                        gắn kết</a></li>
+                <li><a href="#" class="nav-btn nav-btn-white w-100 justify-content-center border text-dark">Lá số
+                        BĐS</a></li>
+            </ul>
+
+            <div class="mt-4 border-top pt-3">
+                <a href="#" class="text-dark text-decoration-none d-flex align-items-center gap-2 fw-semibold"
+                    style="font-size: 16px;">
+                    <i class="bi bi-person-circle fs-3 text-secondary"></i>
+                    <span>Đăng nhập / Đăng ký</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="hero-wrapper" id="hero-slider"
+        data-banners='["assets/images/Banner.png", "assets/images/Banner2.png","assets/images/Banner3.png"]'>
+        <div class="hero-banner">
+            <div class="hero-bg" style="background-image: url('assets/images/Banner.png');"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Bạn đang ở đâu trên<br>
+                    hành trình sở hữu<br>
+                    <span class="accent">căn nhà mơ ước</span>
+                </h1>
+            </div>
+
+            <div class="slider-arrows">
+                <a href="#" class="slider-arrow" id="prev-banner"><i class="bi bi-chevron-left"></i></a>
+                <a href="#" class="slider-arrow" id="next-banner"><i class="bi bi-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Below Hero -->
+    <section class="below-hero">
+        <div class="filter-pills">
+            <button class="filter-pill active" onclick="setActive(this)">Trước khi mua nhà</button>
+            <button class="filter-pill inactive" onclick="setActive(this)">Trong khi mua nhà</button>
+            <button class="filter-pill inactive" onclick="setActive(this)">Sau khi mua nhà</button>
+        </div>
+
+        <div class="splide cards-slider" id="article-slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="article-card">
+                            <a class="article-link" href="#">
+                                <img class="article-card-img"
+                                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80"
+                                    alt="Living room">
+                            </a>
+                            <div class="article-meta">
+                                <div class="article-meta-left">
+                                    <span class="meta-source">ArchiJournal</span>
+                                    <span class="meta-dot"></span>
+                                    <span class="meta-read">8 phút đọc</span>
+                                </div>
+                                <button class="heart-icon" onclick="toggleHeart(this)"><i
+                                        class="bi bi-heart"></i></button>
+                            </div>
+                            <a class="article-link" href="#">
+                                <p class="article-title">Những công trình kiến trúc nổi bật trong năm 2023</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="article-card">
+                            <a class="article-link" href="#">
+                                <img class="article-card-img"
+                                    src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=600&q=80"
+                                    alt="Lamps">
+                            </a>
+                            <div class="article-meta">
+                                <div class="article-meta-left">
+                                    <span class="meta-source">ArchiJournal</span>
+                                    <span class="meta-dot"></span>
+                                    <span class="meta-read">8 phút đọc</span>
+                                </div>
+                                <button class="heart-icon" onclick="toggleHeart(this)"><i
+                                        class="bi bi-heart"></i></button>
+                            </div>
+                            <a class="article-link" href="#">
+                                <p class="article-title">Khám phá phong cách thiết kế đương đại</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="article-card">
+                            <a class="article-link" href="#">
+                                <img class="article-card-img"
+                                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80"
+                                    alt="Mansion">
+                            </a>
+                            <div class="article-meta">
+                                <div class="article-meta-left">
+                                    <span class="meta-source">ArchiJournal</span>
+                                    <span class="meta-dot"></span>
+                                    <span class="meta-read">8 phút đọc</span>
+                                </div>
+                                <button class="heart-icon" onclick="toggleHeart(this)"><i
+                                        class="bi bi-heart"></i></button>
+                            </div>
+                            <a class="article-link" href="#">
+                                <p class="article-title">Bí quyết chọn nội thất phù hợp với không gian</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="article-card">
+                            <a class="article-link" href="#">
+                                <img class="article-card-img"
+                                    src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80"
+                                    alt="Interior">
+                            </a>
+                            <div class="article-meta">
+                                <div class="article-meta-left">
+                                    <span class="meta-source">ArchiJournal</span>
+                                    <span class="meta-dot"></span>
+                                    <span class="meta-read">5 phút đọc</span>
+                                </div>
+                                <button class="heart-icon" onclick="toggleHeart(this)"><i
+                                        class="bi bi-heart"></i></button>
+                            </div>
+                            <a class="article-link" href="#">
+                                <p class="article-title">Xu hướng sử dụng màu sắc tối giản</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="article-card">
+                            <a class="article-link" href="#">
+                                <img class="article-card-img"
+                                    src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
+                                    alt="Architecture">
+                            </a>
+                            <div class="article-meta">
+                                <div class="article-meta-left">
+                                    <span class="meta-source">ArchiJournal</span>
+                                    <span class="meta-dot"></span>
+                                    <span class="meta-read">10 phút đọc</span>
+                                </div>
+                                <button class="heart-icon" onclick="toggleHeart(this)"><i
+                                        class="bi bi-heart"></i></button>
+                            </div>
+                            <a class="article-link" href="#">
+                                <p class="article-title">Nghệ thuật sắp đặt ánh sáng trong phòng khách</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="news-section">
+        <div class="news-header">
+            <h2 class="news-title">Trước mua nhà</h2>
+
+            <ul class="news-tabs">
+                <li class="active">Thị trường</li>
+                <li>Vị trí - Quy hoạch</li>
+                <li>Tài chính</li>
+                <li>Pháp lý</li>
+                <li>Phong Thuỷ</li>
+            </ul>
+
+            <a href="#" class="view-all">Xem tất cả <i class="bi bi-chevron-right fs-6 ms-1"></i></a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <div class="row h-100">
+                    <div class="col-md-6">
+                        <a href="">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                                alt="Living room" class="main-article-img">
+                        </a>
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-start mt-3 mt-md-0">
+                        <div class="article-meta mb-2">
+                            <div class="article-meta-left">
+                                <span class="meta-source">ArchiJournal</span>
+                                <span class="meta-dot"></span>
+                                <span class="meta-read">8 phút đọc</span>
+                            </div>
+                            <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <a class="article-link" href="#">
+                            <h3 class="article-heading">This title of the articles goes here. It’s maximum is 3 lines.
+                                This is showing 3 lines title looks like</h3>
+                        </a>
+                        <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                            dapibus ipsum at sapien interdum, eu malesuada augue rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 d-flex flex-column justify-content-start ps-lg-4">
+                <div class="article-meta mb-2">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+                <a class="article-link" href="#">
+                    <h3 class="article-heading">Những công trình kiến trúc nổi bật trong năm 2023.</h3>
+                </a>
+                <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus
+                    ipsum at sapien interdum, eu malesuada augue rhoncus.</p>
+            </div>
+        </div>
+
+        <hr class="news-divider">
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="expert-section">
+        <div class="splide" id="expert-slider">
+
+            <div class="expert-header d-flex justify-content-between align-items-center mb-4">
+                <h2 class="expert-title mb-0">Bài viết chuyên gia</h2>
+
+                <div class="splide__arrows d-flex gap-2">
+                    <button class="splide__arrow splide__arrow--prev custom-arrow-btn">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next custom-arrow-btn">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <a href="#">
+                            <div class="expert-card">
+                                <div class="expert-bg"
+                                    style="background-image: url('assets/images/chuyengia1.png');">
+                                </div>
+                                <div class="expert-overlay"></div>
+                                <div class="expert-content">
+                                    <div class="expert-number">01</div>
+                                    <h3 class="expert-card-title">Những công trình kiến trúc nổi bật trong năm 2023</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="splide__slide">
+                        <a href="#">
+                            <div class="expert-card">
+                                <div class="expert-bg"
+                                    style="background-image: url('assets/images/chuyengia2.png');">
+                                </div>
+                                <div class="expert-overlay"></div>
+                                <div class="expert-content">
+                                    <div class="expert-number">02</div>
+                                    <h3 class="expert-card-title">Những công trình kiến trúc nổi bật trong năm 2023</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="splide__slide">
+                        <a href="#">
+                            <div class="expert-card">
+                                <div class="expert-bg"
+                                    style="background-image: url('assets/images/chuyengia1.png');">
+                                </div>
+                                <div class="expert-overlay"></div>
+                                <div class="expert-content">
+                                    <div class="expert-number">03</div>
+                                    <h3 class="expert-card-title">Những công trình kiến trúc nổi bật trong năm 2023</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="splide__slide">
+                        <a href="#">
+                            <div class="expert-card">
+                                <div class="expert-bg"
+                                    style="background-image: url('assets/images/Rectangle 22211.png');">
+                                </div>
+                                <div class="expert-overlay"></div>
+                                <div class="expert-content">
+                                    <div class="expert-number">04</div>
+                                    <h3 class="expert-card-title">Những công trình kiến trúc nổi bật trong năm 2023</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="splide__slide">
+                        <a href="#">
+                            <div class="expert-card">
+                                <div class="expert-bg"
+                                    style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80');">
+                                </div>
+                                <div class="expert-overlay"></div>
+                                <div class="expert-content">
+                                    <div class="expert-number">05</div>
+                                    <h3 class="expert-card-title">Những công trình kiến trúc nổi bật trong năm 2023</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="news-section">
+        <div class="news-header">
+            <h2 class="news-title">Trước mua nhà</h2>
+
+            <ul class="news-tabs">
+                <li class="active">Chọn tổ ấm</li>
+                <li>Nhận nhà</li>
+                <li>Buy or Bye</li>
+            </ul>
+
+            <a href="#" class="view-all">Xem tất cả <i class="bi bi-chevron-right fs-6 ms-1"></i></a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <div class="row h-100">
+                    <div class="col-md-6">
+                        <a href="">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                                alt="Living room" class="main-article-img">
+                        </a>
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-start mt-3 mt-md-0">
+                        <div class="article-meta mb-2">
+                            <div class="article-meta-left">
+                                <span class="meta-source">ArchiJournal</span>
+                                <span class="meta-dot"></span>
+                                <span class="meta-read">8 phút đọc</span>
+                            </div>
+                            <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <a class="article-link" href="#">
+                            <h3 class="article-heading">This title of the articles goes here. It’s maximum is 3 lines.
+                                This is showing 3 lines title looks like</h3>
+                        </a>
+                        <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                            dapibus ipsum at sapien interdum, eu malesuada augue rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 d-flex flex-column justify-content-start ps-lg-4">
+                <div class="article-meta mb-2">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+                <a class="article-link" href="#">
+                    <h3 class="article-heading">Những công trình kiến trúc nổi bật trong năm 2023.</h3>
+                </a>
+                <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus
+                    ipsum at sapien interdum, eu malesuada augue rhoncus.</p>
+            </div>
+        </div>
+
+        <hr class="news-divider">
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="news-header">
+            <h2 class="news-title">Sau mua nhà</h2>
+
+            <ul class="news-tabs">
+                <li class="active">Unlock Nhà</li>
+                <li>Lắng nghe nhà thở</li>
+                <li>Nhà đẹp</li>
+                <li>Nhà thông minh</li>
+                <li>Door-dạc</li>
+            </ul>
+
+            <a href="#" class="view-all">Xem tất cả <i class="bi bi-chevron-right fs-6 ms-1"></i></a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <div class="row h-100">
+                    <div class="col-md-6">
+                        <a href="">
+                            <img src="assets/images/Rectangle 22211.png"
+                                alt="Living room" class="main-article-img">
+                        </a>
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-start mt-3 mt-md-0">
+                        <div class="article-meta mb-2">
+                            <div class="article-meta-left">
+                                <span class="meta-source">ArchiJournal</span>
+                                <span class="meta-dot"></span>
+                                <span class="meta-read">8 phút đọc</span>
+                            </div>
+                            <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <a class="article-link" href="#">
+                            <h3 class="article-heading">This title of the articles goes here. It’s maximum is 3 lines.
+                                This is showing 3 lines title looks like</h3>
+                        </a>
+                        <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                            dapibus ipsum at sapien interdum, eu malesuada augue rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 d-flex flex-column justify-content-start ps-lg-4">
+                <div class="article-meta mb-2">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+                <a class="article-link" href="#">
+                    <h3 class="article-heading">Những công trình kiến trúc nổi bật trong năm 2023.</h3>
+                </a>
+                <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus
+                    ipsum at sapien interdum, eu malesuada augue rhoncus.</p>
+            </div>
+        </div>
+
+        <hr class="news-divider">
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="laso-section">
+        <div class="laso-container" style="background-image: url('assets/images/Frame 427319958.png');">
+            <div class="laso-left">
+                <img src="assets/images/Frame 427319914.png" alt="Lá số Bất động sản" class="laso-logo">
+                <h3 class="laso-title">Bấc động sản</h3>
+                <p class="laso-desc">
+                    Hình dung ngôi nhà tương lai của mình dựa<br>
+                    trên thần số học và giúp bạn có thêm kiến thức<br>
+                    để biến giấc mơ thành sự thật
+                </p>
+            </div>
+
+            <div class="laso-right">
+                <form class="laso-form">
+                    <div class="form-group">
+                        <label class="laso-label">Họ và tên <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control custom-input" placeholder="Nhập họ và tên">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="laso-label">Ngày/tháng/năm sinh dương lịch <span
+                                class="text-danger">*</span></label>
+                        <input type="date" class="form-control custom-input text-muted">
+                    </div>
+
+
+
+                    <div class="d-flex align-items-center w-100">
+
+                        <div class="laso-radio-group mb-0">
+                            <label class="laso-label mb-2">Bạn đã sở hữu căn nhà nào chưa?</label>
+                            <div class="d-flex gap-5">
+                                <div class="form-check custom-radio-wrapper">
+                                    <input class="form-check-input custom-radio" type="radio" name="ownHouse"
+                                        id="hasHouse">
+                                    <label class="form-check-label" for="hasHouse">Đã có</label>
+                                </div>
+                                <div class="form-check custom-radio-wrapper">
+                                    <input class="form-check-input custom-radio" type="radio" name="ownHouse"
+                                        id="noHouse" checked>
+                                    <label class="form-check-label" for="noHouse">Chưa có</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="laso-submit-wrapper m-0 ms-auto">
+                            <button type="submit" class="btn-laso-submit">
+                                <span class="btn-text">Tra cứu</span>
+                                <span class="btn-icon"><i class="bi bi-arrow-down"></i></span>
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="news-header">
+            <h2 class="news-title">Từ nhà ra tiền</h2>
+
+            <ul class="news-tabs">
+                <li class="active">Cho thuê</li>
+                <li>Chuyển nhượng</li>
+            </ul>
+
+            <a href="#" class="view-all">Xem tất cả <i class="bi bi-chevron-right fs-6 ms-1"></i></a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <div class="row h-100">
+                    <div class="col-md-6">
+                        <a href="">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                                alt="Living room" class="main-article-img">
+                        </a>
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-start mt-3 mt-md-0">
+                        <div class="article-meta mb-2">
+                            <div class="article-meta-left">
+                                <span class="meta-source">ArchiJournal</span>
+                                <span class="meta-dot"></span>
+                                <span class="meta-read">8 phút đọc</span>
+                            </div>
+                            <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <a class="article-link" href="#">
+                            <h3 class="article-heading">This title of the articles goes here. It’s maximum is 3 lines.
+                                This is showing 3 lines title looks like</h3>
+                        </a>
+                        <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                            dapibus ipsum at sapien interdum, eu malesuada augue rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 d-flex flex-column justify-content-start ps-lg-4">
+                <div class="article-meta mb-2">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+                <a class="article-link" href="#">
+                    <h3 class="article-heading">Những công trình kiến trúc nổi bật trong năm 2023.</h3>
+                </a>
+                <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus
+                    ipsum at sapien interdum, eu malesuada augue rhoncus.</p>
+            </div>
+        </div>
+
+        <hr class="news-divider">
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
+                <a class="article-link" href="#">
+                    <h4 class="small-article-heading">This title of the articles goes here. It's maximum is 3 lines.
+                    </h4>
+                </a>
+                <div class="article-meta mt-3">
+                    <div class="article-meta-left">
+                        <span class="meta-source">ArchiJournal</span>
+                        <span class="meta-dot"></span>
+                        <span class="meta-read">8 phút đọc</span>
+                    </div>
+                    <button class="heart-icon" onclick="toggleHeart(this)"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="homentor-section position-relative overflow-hidden">
+        <div class="homentor-vectors-wrapper position-absolute top-0 start-0 h-100 w-100"
+            style="z-index: 0; pointer-events: none;">
+            <img class="vector1" src="assets/images/Vector 179.png" alt="" class="position-absolute top-0 start-0">
+
+            <img class="vector2" src="assets/images/Vector 178.png" alt="" class="position-absolute top-0 end-0">
+        </div>
+
+        <div class="homentor-content position-relative" style="z-index: 1;">
+            <div class="row align-items-center mb-5">
+                <div class="text-content-left col-lg-6 mb-4 mb-lg-0 d-flex flex-column justify-content-between h-100">
+                    <div>
+                        <img src="assets/images/homer.png" alt="Homentor Logo" class="homentor-logo">
+                    </div>
+
+                    <div>
+                        <div class="homentor-ep-badge">Episode 4</div>
+                        <h2 class="homentor-main-title">Tại sao biệt thự biển lại nâng cao chất lượng cuộc sống?</h2>
+
+                        <div class="homentor-exclusives mt-4">
+                            <span class="text-white-50">Độc quyền trên</span>
+                            <a href="#" class="exclusive-link">
+                                <i class="bi bi-youtube text-danger"></i> Văn Phú
+                            </a>
+                            <span class="divider-line">|</span>
+                            <a href="#" class="exclusive-link">
+                                <i class="bi bi-youtube text-danger"></i> Spiderum
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="homentor-main-vid">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                            alt="Main Video" class="img-fluid w-100 object-fit-cover"
+                            style="height: 360px; border-radius: 8px;">
+                        <div class="play-btn-large">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="homentor-divider">
+
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="homentor-card">
+                        <div class="homentor-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
+                                alt="Thumbnail" class="w-100 object-fit-cover" style="height: 160px;">
+                            <div class="play-btn-small">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                        </div>
+                        <div class="homentor-card-meta mb-2">
+                            <div class="meta-left">
+                                <span class="ep-text">Episode 3</span>
+                                <span class="meta-dot"></span>
+                                <span class="time-text">52 phút</span>
+                            </div>
+                            <button class="heart-icon-white" onclick="toggleHeart(this)"><i
+                                    class="bi bi-heart"></i></button>
+                        </div>
+                        <h3 class="homentor-card-title">Những công trình kiến trúc nổi bật trong năm 2023</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="homentor-card">
+                        <div class="homentor-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80"
+                                alt="Thumbnail" class="w-100 object-fit-cover" style="height: 160px;">
+                            <div class="play-btn-small">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                        </div>
+                        <div class="homentor-card-meta mb-2">
+                            <div class="meta-left">
+                                <span class="ep-text">Episode 2</span>
+                                <span class="meta-dot"></span>
+                                <span class="time-text">44 phút</span>
+                            </div>
+                            <button class="heart-icon-white" onclick="toggleHeart(this)"><i
+                                    class="bi bi-heart"></i></button>
+                        </div>
+                        <h3 class="homentor-card-title">Những công trình kiến trúc nổi bật trong năm 2023</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="homentor-card">
+                        <div class="homentor-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=600&q=80"
+                                alt="Thumbnail" class="w-100 object-fit-cover" style="height: 160px;">
+                            <div class="play-btn-small">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                        </div>
+                        <div class="homentor-card-meta mb-2">
+                            <div class="meta-left">
+                                <span class="ep-text">Episode 1</span>
+                                <span class="meta-dot"></span>
+                                <span class="time-text">43 phút</span>
+                            </div>
+                            <button class="heart-icon-white" onclick="toggleHeart(this)"><i
+                                    class="bi bi-heart"></i></button>
+                        </div>
+                        <h3 class="homentor-card-title">Những công trình kiến trúc nổi bật trong năm 2023</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="homentor-card">
+                        <div class="homentor-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80"
+                                alt="Thumbnail" class="w-100 object-fit-cover" style="height: 160px;">
+                            <div class="play-btn-small">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                        </div>
+                        <div class="homentor-card-meta mb-2">
+                            <div class="meta-left">
+                                <span class="ep-text">Season 1 - Trailer</span>
+                                <span class="meta-dot"></span>
+                                <span class="time-text">2 phút</span>
+                            </div>
+                            <button class="heart-icon-white" onclick="toggleHeart(this)"><i
+                                    class="bi bi-heart"></i></button>
+                        </div>
+                        <h3 class="homentor-card-title">Những công trình kiến trúc nổi bật trong năm 2023</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="site-footer position-relative">
+        <div class="footer-bg-pattern"></div>
+
+        <div class="row align-items-center w-100 m-0 position-relative" style="z-index: 1;">
+            
+            <div class="col-lg-4 mb-5 mb-lg-0 pe-lg-5">
+                <img src="assets/images/Logo_footer.png" alt="Living Connection Logo" class="footer-logo">
+            </div>
+
+            <div class="col-lg-8">
+                <div class="row align-items-start">
+                    
+                    <div class="col-sm-4 col-6 mb-4 mb-sm-0">
+                        <ul class="footer-links">
+                            <li><a href="#">La bàn bất động sản</a></li>
+                            <li><a href="#">Nhà đẹp</a></li>
+                            <li><a href="#">Mua nhà Wiki</a></li>
+                            <li><a href="#">Door - đạc</a></li>
+                            <li><a href="#">Mua nhà - Buy or bye</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4 col-6 mb-4 mb-sm-0">
+                        <ul class="footer-links">
+                            <li><a href="#">Thủ tục pháp lý</a></li>
+                            <li><a href="#">Giải pháp tài chính</a></li>
+                            <li><a href="#">Unlock nhà</a></li>
+                            <li><a href="#">Phong thuỷ</a></li>
+                            <li><a href="#">Từ điển "Sống"</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4 col-12">
+                        <ul class="footer-links">
+                            <li><a href="#">Cho thuê</a></li>
+                            <li><a href="#">Chuyển nhượng</a></li>
+                            <li><a href="#">Lắng nghe nhà thở</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+
+    <script src="assets/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
