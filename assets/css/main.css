@@ -2315,7 +2315,6 @@ a:hover .main-article-img {
     border-radius: 4px;
     display: block;
 }
-
 /* ── SECTION DECOR WATERMARK ── */
 .news-section--decorated {
     position: relative;
@@ -2323,7 +2322,8 @@ a:hover .main-article-img {
 
 .news-section-decor {
     position: absolute;
-    top: 820px;
+    top: 110%;
+    transform: translateY(-30%);
     left: -250px;
     height: 100%;
     width: auto;
@@ -2334,19 +2334,28 @@ a:hover .main-article-img {
     opacity: 0.5;
     user-select: none;
 }
-@media (max-width: 2424px) {
+
+@media (max-width: 1440px) {
     .news-section-decor {
-        top: 700px;
-        left: -250px;
+        left: -140px;
+        height: 80%;
     }
 }
-@media (max-width: 1624px) {
+
+@media (max-width: 1280px) {
     .news-section-decor {
-        top: 600px;
-        left: -150px;
-        height: 90%;
+        left: -120px;
+        height: 70%;
     }
 }
+
+@media (max-width: 1024px) {
+    .news-section-decor {
+        left: -100px;
+        height: 60%;
+    }
+}
+
 @media (max-width: 991px) {
     .news-section-decor {
         display: none;
