@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!bannerData) return;
 
     const bannerImages = JSON.parse(bannerData);
-    const heroBg = document.querySelector('.hero-bg');
+    const heroBgTop = document.getElementById('heroBgTop');
+    const heroBgBottom = document.getElementById('heroBgBottom');
     const prevBtn = document.getElementById('prev-banner');
     const nextBtn = document.getElementById('next-banner');
     let currentBannerIndex = 0;
@@ -49,7 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function changeBanner(index) {
-        heroBg.style.backgroundImage = `url('${bannerImages[index]}')`;
+        heroBgBottom.style.backgroundImage = `url('${bannerImages[index]}')`;
+        heroBgTop.classList.add('fade-out');
+
+        setTimeout(() => {
+            heroBgTop.style.backgroundImage = `url('${bannerImages[index]}')`;
+            heroBgTop.classList.remove('fade-out');
+        }, 800);
     }
 
     prevBtn.addEventListener('click', function (e) {
@@ -111,9 +118,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (expertSliderEl) {
         var expertSplide = new Splide(expertSliderEl, {
             type: 'slide',
-            perPage: 4,     
-            gap: '24px', 
-            pagination: false,  
+            perPage: 4,
+            gap: '24px',
+            pagination: false,
             drag: true,
             snap: true,
             breakpoints: {
@@ -125,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 576: {
                     perPage: 1,
-                    padding: { right: '20%' }, 
+                    padding: { right: '20%' },
                     gap: '16px',
                 }
             }
@@ -135,11 +142,107 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var backToTopBtn = document.getElementById("backToTopBtn");
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 300) {
             backToTopBtn.classList.add("show");
         } else {
             backToTopBtn.classList.remove("show");
         }
+    });
+
+
+    const megaLinks = document.querySelectorAll('.mega-link');
+    const megaPreviewImg = document.getElementById('megaPreviewImg');
+
+    megaLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            const img = link.getAttribute('data-img');
+            if (img && megaPreviewImg) {
+                megaPreviewImg.style.opacity = '0';
+                setTimeout(() => {
+                    megaPreviewImg.src = img;
+                    megaPreviewImg.style.opacity = '1';
+                }, 150);
+            }
+            document.querySelectorAll('.mega-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+    // Mobile 2-panel navigation
+    const goToSubMenu = document.getElementById('goToSubMenu');
+    const backToMain = document.getElementById('backToMain');
+    const mobilePanel2 = document.getElementById('mobilePanel2');
+
+    if (goToSubMenu && mobilePanel2) {
+        goToSubMenu.addEventListener('click', () => {
+            mobilePanel2.classList.add('active');
+        });
+    }
+
+    if (backToMain && mobilePanel2) {
+        backToMain.addEventListener('click', () => {
+            mobilePanel2.classList.remove('active');
+        });
+    }
+
+    // Reset panel khi đóng offcanvas
+    const mobileMenuEl = document.getElementById('mobileMenu');
+    if (mobileMenuEl && mobilePanel2) {
+        mobileMenuEl.addEventListener('hidden.bs.offcanvas', () => {
+            mobilePanel2.classList.remove('active');
+        });
+    }
+
+    // Panel 3: Từ nhà ra tiền
+    const goToSubMenu2 = document.getElementById('goToSubMenu2');
+    const backToMain2 = document.getElementById('backToMain2');
+    const mobilePanel3 = document.getElementById('mobilePanel3');
+
+    if (goToSubMenu2 && mobilePanel3) {
+        goToSubMenu2.addEventListener('click', () => {
+            mobilePanel3.classList.add('active');
+        });
+    }
+
+    if (backToMain2 && mobilePanel3) {
+        backToMain2.addEventListener('click', () => {
+            mobilePanel3.classList.remove('active');
+        });
+    }
+
+    // Reset panel 3 khi đóng offcanvas
+    if (mobileMenuEl && mobilePanel3) {
+        mobileMenuEl.addEventListener('hidden.bs.offcanvas', () => {
+            mobilePanel3.classList.remove('active');
+        });
+    }
+
+    document.querySelectorAll('.nav-item-dropdown, .nav-item-dropdown--simple').forEach(item => {
+        let hideTimer = null;
+
+        const dropdown = item.querySelector('.mega-dropdown, .simple-dropdown');
+        if (!dropdown) return;
+
+        const show = () => {
+            clearTimeout(hideTimer);
+            dropdown.style.opacity = '1';
+            dropdown.style.visibility = 'visible';
+            dropdown.style.pointerEvents = 'auto';
+            dropdown.style.transform = 'translateY(0)';
+        };
+
+        const hide = () => {
+            hideTimer = setTimeout(() => {
+                dropdown.style.opacity = '0';
+                dropdown.style.visibility = 'hidden';
+                dropdown.style.pointerEvents = 'none';
+                dropdown.style.transform = 'translateY(-4px)';
+            }, 150);
+        };
+
+        item.addEventListener('mouseenter', show);
+        item.addEventListener('mouseleave', hide);
+        dropdown.addEventListener('mouseenter', show);
+        dropdown.addEventListener('mouseleave', hide);
     });
 });

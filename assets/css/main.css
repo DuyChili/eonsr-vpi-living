@@ -82,7 +82,7 @@ body {
 /* Scrolled state */
 .navbar.scrolled {
     position: fixed;
-    background: white;
+    background: #ffffff;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -205,9 +205,20 @@ body {
     inset: 0;
     background-size: cover;
     background-position: center 68%;
-    transition: background-image 0.6s ease-in-out;
+}
+.hero-bg--bottom {
+    z-index: 0;
 }
 
+.hero-bg--top {
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.hero-bg--top.fade-out {
+    opacity: 0;
+}
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -1328,6 +1339,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .homentor-vectors-wrapper .vector1, .homentor-vectors-wrapper .vector2 {
+        display: none;
+    }
     .homentor-content .text-content-left {
         padding-right: 0;
     }
@@ -1349,34 +1363,27 @@ body {
 /* ── FOOTER SECTION ── */
 .site-footer {
     background-color: #171717;
-    /* Màu nền đen nhám chuẩn thiết kế */
     padding: 80px 124px;
     color: white;
     overflow: hidden;
-    /* Cắt phần pattern bị tràn */
 }
 
-/* Background họa tiết bên trái */
 .footer-bg-pattern {
     position: absolute;
     top: 0;
     left: 0;
     width: 40%;
     height: 100%;
-    /* ÔNG GẮN ĐƯỜNG DẪN ẢNH PATTERN (CÁI VÒNG CUNG KẺ SỌC) VÀO ĐÂY NHÉ */
-    background-image: url('../images/Intersect.png');
     background-size: cover;
     background-position: left center;
     background-repeat: no-repeat;
     opacity: 0.8;
     z-index: 0;
     pointer-events: none;
-    /* Không cản trở click chuột */
 }
 
 .footer-logo {
     max-width: 280px;
-    /* Độ to của logo */
     height: auto;
     object-fit: contain;
 }
@@ -1389,7 +1396,6 @@ body {
 
 .footer-links li {
     margin-bottom: 20px;
-    /* Khoảng cách giữa các dòng chữ */
 }
 
 .footer-links li:last-child {
@@ -1406,13 +1412,10 @@ body {
 
 .footer-links a:hover {
     color: var(--orange);
-    /* Chĩa chuột vào sáng màu cam */
-}
 
-/* ── NÚT BACK TO TOP TRÔI NỔI ── */
+}
 .back-to-top {
     position: fixed;
-    /* Ép nó trôi nổi trên màn hình */
     bottom: 40px;
     right: 40px;
     width: 50px;
@@ -1427,35 +1430,26 @@ body {
     font-size: 20px;
     cursor: pointer;
     box-shadow: 0 0 15px rgba(224, 117, 45, 0.4);
-    /* Hiệu ứng phát sáng màu cam */
     z-index: 9999;
-    /* Luôn nằm trên cùng */
-
-    /* Ẩn nút đi khi mới load trang */
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    /* Kéo tuột xuống 1 tí để tạo hiệu ứng trượt lên */
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* Class này sẽ được JS thêm vào khi cuộn chuột */
+
 .back-to-top.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    /* Trượt về vị trí cũ */
 }
 
 .back-to-top:hover {
     background-color: var(--primary-orange-hover, #c56526);
     box-shadow: 0 0 25px rgba(224, 117, 45, 0.7);
-    /* Sáng mạnh hơn khi hover */
     transform: translateY(-4px);
-    /* Nhấc nhẹ lên */
 }
 
-/* Responsive cho Mobile */
 @media (max-width: 768px) {
     .back-to-top {
         bottom: 20px;
@@ -1466,7 +1460,6 @@ body {
     }
 }
 
-/* ── RESPONSIVE CHO FOOTER ── */
 @media (max-width: 1024px) {
     .site-footer {
         padding: 60px 40px;
@@ -1481,7 +1474,6 @@ body {
     .footer-bg-pattern {
         width: 100%;
         opacity: 0.15;
-        /* Làm mờ pattern đi trên mobile để dễ đọc chữ */
     }
 
     .footer-links li {
@@ -1489,15 +1481,12 @@ body {
     }
 }
 
-/* ── SECTION SỐNG GẮN KẾT ── */
 .stories-section {
-    /* Gradient nhạt dần theo Figma */
     background: linear-gradient(-90deg, #FFE7D9 0%, rgba(255, 255, 255, 0) 50%);
     padding: 60px 124px;
     color: #161616;
 }
 
-/* Các chi tiết trang trí nền (Sao & Vòng cung) */
 .stories-bg-decor {
     position: absolute;
     top: 0;
@@ -1506,21 +1495,50 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 0;
-    /* Lớp cơ sở */
 }
 
-.stories-main-title {
+.stories-main-title-top,
+.stories-main-title-bottom {
     font-family: 'New York Large', 'New York', serif;
-    font-size: 44px;
+    font-size: 48px;
     font-weight: 400;
     font-style: italic;
-    line-height: 1.2;
+    line-height: 132%;
+    letter-spacing: 0%;
+    color: #1a1a1a;
     margin-bottom: 0;
     position: relative;
     z-index: 1;
 }
 
+.stories-main-title-bottom {
+    margin-left: 100px;
+}
+
+@media (max-width: 1024px) {
+
+    .stories-main-title-top,
+    .stories-main-title-bottom {
+        font-size: 40px;
+    }
+
+    .stories-main-title-bottom {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .stories-main-title-top,
+    .stories-main-title-bottom {
+        font-size: 32px;
+    }
+}
+
 .stories-desc {
+    margin-left: auto;
+    text-align: end;
     width: 60%;
     font-size: 15px;
     color: #4a4a4a;
@@ -1547,12 +1565,10 @@ body {
     position: relative;
 }
 
-/* Gạch chân màu cam dính sát text */
 .stories-col-title::after {
     content: '';
     position: absolute;
     bottom: -13px;
-    /* Đẩy xuống chạm mép border-bottom của .stories-col-header */
     left: 0;
     width: 100%;
     height: 2px;
@@ -1571,7 +1587,6 @@ body {
     color: var(--orange);
 }
 
-/* Bài viết nhỏ dạng List */
 .story-item {
     border-bottom: 1px solid #E4E4E4;
 }
@@ -1601,10 +1616,8 @@ body {
 .story-list-content {
     flex-grow: 1;
     min-width: 0;
-    /* Ngăn text tràn layout flex */
-}
 
-/* Thẻ Hỏi Đáp (Q&A) */
+}
 .qa-card {
     background: #FFF5EC;
     border: 1px solid #f0f0f0;
@@ -1740,13 +1753,10 @@ body {
 
 .qa-bottom-action:hover {
     background-color: #fffaf6;
-    /* Sáng nhẹ khi hover */
 }
 
-/* (Giữ nguyên .expert-avatar của ông) */
 .expert-avatar {
     width: 32px;
-    /* To hơn xíu cho đẹp */
     height: 32px;
     background-color: var(--orange);
     border-radius: 50%;
@@ -1754,6 +1764,12 @@ body {
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .stories-desc {
+        text-align: start;
+        width: 100%;
+        margin-left: 0;
+    }
+
     .stories-section {
         padding: 60px 40px;
     }
@@ -1764,9 +1780,6 @@ body {
         padding: 40px 20px;
     }
 
-    .stories-main-title {
-        font-size: 32px;
-    }
 
     .story-list-img {
         width: 80px;
@@ -1774,19 +1787,16 @@ body {
     }
 }
 
-/* 1. Hình S.png (Cao nhất, góc trái) */
 .stories-section .vec {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 400px;
-    /* Tùy chỉnh độ to của hình S */
     z-index: 2;
     pointer-events: none;
     opacity: 0.8;
 }
 
-/* 2. Khung chứa các pattern (Phủ kín section để làm gốc tọa độ) */
 .stories-bg-decor {
     position: absolute;
     top: 0;
@@ -1796,21 +1806,18 @@ body {
     pointer-events: none;
 }
 
-/* Ép tất cả các hình vector con về đúng kích thước thật */
 .stories-bg-decor img {
     position: absolute;
     width: auto !important;
     height: 50%;
 }
 
-/* 3. Phân lớp Z-index */
 .pattern-star-1 {
     z-index: 0;
 }
 
 .pattern-star-2 {
     z-index: 1;
-    /* Lớp giữa */
 }
 
 .pattern-star-1 .vec1 {
@@ -1833,7 +1840,6 @@ body {
     }
 }
 
-/* Nhóm 2: Nằm nửa dưới, góc phải */
 .pattern-star-2 .vec3 {
     height: 16%;
     bottom: 80%;
@@ -1868,7 +1874,6 @@ body {
     width: 100%;
     padding: 60px 124px;
     background-color: #ffffff;
-    /* Hoặc #ffffff tùy vào nền khu vực bạn đặt */
     display: flex;
     justify-content: center;
 }
@@ -1906,7 +1911,6 @@ body {
     width: 100%;
     max-width: 450px;
     border-bottom: 1px solid #d4d4d4;
-    /* Đường kẻ ngang bên dưới */
 }
 
 .newsletter-input {
@@ -1935,7 +1939,6 @@ body {
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
     margin-bottom: 1px;
-    /* Căn chỉnh nút không đè lên viền dưới */
 }
 
 .newsletter-btn:hover {
@@ -1943,7 +1946,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* ── Responsive cho Newsletter ── */
 @media (max-width: 1024px) {
     .newsletter-section {
         padding: 50px 40px;
@@ -1969,4 +1971,347 @@ body {
     .newsletter-form {
         max-width: 100%;
     }
+}
+
+/* ── MEGA DROPDOWN ── */
+.nav-item-dropdown {
+    position: static;
+}
+
+.mega-dropdown {
+    position: fixed;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.25s ease;
+    z-index: 999;
+}
+
+/* .nav-item-dropdown:hover .mega-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+} */
+
+.mega-dropdown-inner {
+
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 124px;
+    display: flex;
+    gap: 0;
+}
+
+.mega-col {
+    flex: 1;
+    padding-right: 32px;
+    border-right: 1px solid #f0f0f0;
+    margin-right: 32px;
+}
+
+.mega-col:last-of-type {
+    border-right: none;
+    margin-right: 0;
+}
+
+.mega-col-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999;
+    margin-bottom: 16px;
+}
+
+.mega-link {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #161616;
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #f5f5f5;
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.mega-link:last-child {
+    border-bottom: none;
+}
+
+.mega-link:hover,
+.mega-link.active {
+    color: var(--orange);
+    padding-left: 6px;
+}
+
+.mega-preview {
+    width: 280px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.mega-preview-img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .mega-dropdown {
+        display: none;
+    }
+}
+
+/* ── MOBILE 2-PANEL NAVIGATION ── */
+.offcanvas-mobile-menu {
+    width: 300px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.offcanvas-mobile-menu .offcanvas-body {
+    padding: 0 16px 16px !important;
+}
+
+.offcanvas-mobile-menu .offcanvas-header {
+    padding: 16px 16px 0 !important;
+}
+
+.offcanvas-mobile-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile-panel {
+    min-width: 300px;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    background: white;
+    overflow-y: auto;
+}
+
+.mobile-panel--sub {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    background: white;
+    z-index: 10;
+}
+
+.mobile-panel--sub.active {
+    transform: translateX(0);
+}
+
+.mobile-nav-has-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mobile-nav-has-sub i {
+    color: #bbb;
+    font-size: 13px;
+}
+
+.mobile-nav-has-sub:hover {
+    color: var(--orange);
+}
+
+/* Nút back */
+.mobile-back-btn {
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--orange);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+}
+
+.mobile-back-btn i {
+    font-size: 13px;
+}
+
+.mobile-sub-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #161616;
+    margin: 16px 0 20px;
+}
+
+
+.mobile-mega-group {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-mega-group:last-child {
+    border-bottom: none;
+}
+
+.mobile-mega-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.mobile-mega-link {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #f8f8f8;
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.mobile-mega-link:last-child {
+    border-bottom: none;
+}
+
+.mobile-mega-link:hover {
+    color: var(--orange);
+    padding-left: 4px;
+}
+
+.nav-item-dropdown--simple {
+    position: relative !important;
+}
+
+.nav-item-dropdown--simple::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background: transparent;
+}
+
+.simple-dropdown {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    background: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: all 0.22s ease;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+/* 
+.nav-item-dropdown--simple:hover .simple-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+} */
+
+.simple-dropdown-link {
+    display: block;
+    padding: 13px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #161616;
+    text-decoration: none;
+    border-bottom: 1px solid #f5f5f5;
+    transition: color 0.2s, background 0.2s;
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.simple-dropdown-link:last-child {
+    border-bottom: none;
+}
+
+.simple-dropdown-link:hover {
+    color: var(--orange);
+    padding-left: 26px;
+}
+
+@media (max-width: 1024px) {
+    .simple-dropdown {
+        display: none !important;
+    }
+}
+
+.main-article-img-wrapper,
+.story-list-item a,
+.homentor-card-img-wrapper {
+    overflow: hidden;
+}
+
+.main-article-img {
+    transition: transform 0.5s ease;
+}
+
+a:hover .main-article-img {
+    transform: scale(1.06);
+}
+
+.story-list-img {
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.story-list-item:hover .story-list-img {
+    transform: scale(1.08);
+}
+
+.story-item .homentor-card-img-wrapper img {
+    transition: transform 0.5s ease;
+}
+
+.story-item:hover .homentor-card-img-wrapper img {
+    transform: scale(1.06);
+}
+
+.article-card-img {
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.news-section .col-md-6 a,
+.news-section .col-md-6>a {
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.story-list-item .flex-shrink-0 {
+    overflow: hidden;
+    border-radius: 4px;
+    display: block;
 }

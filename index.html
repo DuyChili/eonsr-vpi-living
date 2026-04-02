@@ -36,8 +36,66 @@
 
             <div class="desktop-nav">
                 <ul class="nav-links">
-                    <li><a class="nav-link" href="#">Hành trình mua nhà <i class="bi bi-chevron-down"></i></a></li>
-                    <li><a class="nav-link" href="#">Từ nhà ra tiền <i class="bi bi-chevron-down"></i></a></li>
+                    <li class="nav-item-dropdown">
+                        <a class="nav-link" href="#">Hành trình mua nhà <i class="bi bi-chevron-down"></i></a>
+                        <div class="mega-dropdown">
+                            <div class="mega-dropdown-inner">
+                                <div class="mega-col">
+                                    <h6 class="mega-col-title">Trước mua nhà</h6>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80">Thị
+                                        trường bất động sản</a>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80">Mua
+                                        nhà Wiki</a>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80">Nhà
+                                        đẹp</a>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80">Door
+                                        – đạc</a>
+                                </div>
+                                <div class="mega-col">
+                                    <h6 class="mega-col-title">Trong mua nhà</h6>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80">Mua
+                                        nhà – Buy or bye</a>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80">Giải
+                                        pháp tài chính</a>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80">Thủ
+                                        tục pháp lý</a>
+                                </div>
+                                <div class="mega-col">
+                                    <h6 class="mega-col-title">Sau mua nhà</h6>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80">Unlock
+                                        nhà</a>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80">Phong
+                                        thủy</a>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80">Từ
+                                        điển Sống</a>
+                                    <a href="#" class="mega-link"
+                                        data-img="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80">Giải
+                                        pháp không gian</a>
+                                </div>
+                                <div class="mega-preview">
+                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80"
+                                        alt="" class="mega-preview-img" id="megaPreviewImg">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item-dropdown nav-item-dropdown--simple">
+                        <a class="nav-link" href="#">Từ nhà ra tiền <i class="bi bi-chevron-down"></i></a>
+                        <div class="simple-dropdown">
+                            <a href="#" class="simple-dropdown-link">Cho thuê</a>
+                            <a href="#" class="simple-dropdown-link">Chuyển nhượng</a>
+                        </div>
+                    </li>
                     <li><a class="nav-btn nav-btn-orange" href="#">Homentor</a></li>
                     <li><a class="nav-btn nav-btn-white" href="#">Sống gắn kết</a></li>
                     <li><a class="nav-btn nav-btn-white" href="#">Lá số BĐS</a></li>
@@ -55,37 +113,110 @@
     <!-- Menu mobile -->
     <div class="offcanvas offcanvas-start offcanvas-mobile-menu" tabindex="-1" id="mobileMenu"
         aria-labelledby="mobileMenuLabel">
-        <div class="offcanvas-header pb-0">
-            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
-            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body d-flex flex-column">
-            <ul class="list-unstyled mt-3 mb-auto">
-                <li><a href="#" class="mobile-nav-link">Hành trình mua nhà</a></li>
-                <li><a href="#" class="mobile-nav-link">Từ nhà ra tiền</a></li>
-                <li class="mt-4"><a href="#"
-                        class="nav-btn nav-btn-orange w-100 justify-content-center mb-3 text-white">Homentor</a></li>
-                <li><a href="#" class="nav-btn nav-btn-white w-100 justify-content-center border mb-3 text-dark">Sống
-                        gắn kết</a></li>
-                <li><a href="#" class="nav-btn nav-btn-white w-100 justify-content-center border text-dark">Lá số
-                        BĐS</a></li>
-            </ul>
 
-            <div class="mt-4 border-top pt-3">
-                <a href="#" class="text-dark text-decoration-none d-flex align-items-center gap-2 fw-semibold"
-                    style="font-size: 16px;">
-                    <i class="bi bi-person-circle fs-3 text-secondary"></i>
-                    <span>Đăng nhập / Đăng ký</span>
-                </a>
+        <!-- Panel 1: Menu chính -->
+        <div class="mobile-panel" id="mobilePanel1">
+            <div class="offcanvas-header pb-0">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <ul class="list-unstyled mt-3 mb-auto">
+                    <li>
+                        <div class="mobile-nav-link mobile-nav-has-sub" id="goToSubMenu">
+                            Hành trình mua nhà
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mobile-nav-link mobile-nav-has-sub" id="goToSubMenu2">
+                            Từ nhà ra tiền
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </li>
+                    <li class="mt-4">
+                        <a href="#"
+                            class="nav-btn nav-btn-orange w-100 justify-content-center mb-3 text-white">Homentor</a>
+                    </li>
+                    <li><a href="#"
+                            class="nav-btn nav-btn-white w-100 justify-content-center border mb-3 text-dark">Sống gắn
+                            kết</a></li>
+                    <li><a href="#" class="nav-btn nav-btn-white w-100 justify-content-center border text-dark">Lá số
+                            BĐS</a></li>
+                </ul>
+                <div class="mt-4 border-top pt-3">
+                    <a href="#" class="text-dark text-decoration-none d-flex align-items-center gap-2 fw-semibold"
+                        style="font-size: 16px;">
+                        <i class="bi bi-person-circle fs-3 text-secondary"></i>
+                        <span>Đăng nhập / Đăng ký</span>
+                    </a>
+                </div>
             </div>
         </div>
+
+        <!-- Panel 2: Submenu Hành trình mua nhà -->
+        <div class="mobile-panel mobile-panel--sub" id="mobilePanel2">
+            <div class="offcanvas-header pb-0">
+                <button class="mobile-back-btn" id="backToMain">
+                    <i class="bi bi-chevron-left"></i> Menu
+                </button>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <h6 class="mobile-sub-heading">Hành trình mua nhà</h6>
+
+                <div class="mobile-mega-group">
+                    <p class="mobile-mega-title">Trước mua nhà</p>
+                    <a href="#" class="mobile-mega-link">Thị trường bất động sản</a>
+                    <a href="#" class="mobile-mega-link">Mua nhà Wiki</a>
+                    <a href="#" class="mobile-mega-link">Nhà đẹp</a>
+                    <a href="#" class="mobile-mega-link">Door – đạc</a>
+                </div>
+                <div class="mobile-mega-group">
+                    <p class="mobile-mega-title">Trong mua nhà</p>
+                    <a href="#" class="mobile-mega-link">Mua nhà – Buy or bye</a>
+                    <a href="#" class="mobile-mega-link">Giải pháp tài chính</a>
+                    <a href="#" class="mobile-mega-link">Thủ tục pháp lý</a>
+                </div>
+                <div class="mobile-mega-group">
+                    <p class="mobile-mega-title">Sau mua nhà</p>
+                    <a href="#" class="mobile-mega-link">Unlock nhà</a>
+                    <a href="#" class="mobile-mega-link">Phong thủy</a>
+                    <a href="#" class="mobile-mega-link">Từ điển Sống</a>
+                    <a href="#" class="mobile-mega-link">Giải pháp không gian</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-panel mobile-panel--sub" id="mobilePanel3">
+            <div class="offcanvas-header pb-0">
+                <button class="mobile-back-btn" id="backToMain2">
+                    <i class="bi bi-chevron-left"></i> Menu
+                </button>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <h6 class="mobile-sub-heading">Từ nhà ra tiền</h6>
+                <div class="mobile-mega-group">
+                    <a href="#" class="mobile-mega-link">Cho thuê</a>
+                    <a href="#" class="mobile-mega-link">Chuyển nhượng</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Banner -->
     <div class="hero-wrapper" id="hero-slider"
         data-banners='["assets/images/Banner.png", "assets/images/Banner2.png","assets/images/Banner3.png"]'>
         <div class="hero-banner">
-            <div class="hero-bg" style="background-image: url('assets/images/Banner.png');"></div>
+            <div class="hero-bg hero-bg--bottom" id="heroBgBottom"
+                style="background-image: url('assets/images/Banner.png');"></div>
+            <div class="hero-bg hero-bg--top" id="heroBgTop" style="background-image: url('assets/images/Banner.png');">
+            </div>
             <div class="hero-overlay"></div>
 
             <div class="hero-text">
@@ -716,6 +847,11 @@
                     </div>
 
                     <div class="form-group">
+                        <label class="laso-label">Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control custom-input" placeholder="Nhập email">
+                    </div>
+
+                    <div class="form-group">
                         <label class="laso-label">Ngày/tháng/năm sinh dương lịch <span
                                 class="text-danger">*</span></label>
                         <input type="date" class="form-control custom-input text-muted">
@@ -1015,30 +1151,30 @@
     <section class="stories-section position-relative">
         <img class="vec" src="assets/images/S.png" alt="">
         <div class="stories-bg-decor pattern-star-1">
-             <img class="vec1" src="assets/images/Vector 189.png" alt="">
-             <img class="vec2" src="assets/images/Vector 188.png" alt="">
+            <img class="vec1" src="assets/images/Vector 189.png" alt="">
+            <img class="vec2" src="assets/images/Vector 188.png" alt="">
         </div>
         <div class="stories-bg-decor pattern-star-2">
             <img class="vec3" src="assets/images/Group 466258.png" alt="">
-             <img class="vec4" src="assets/images/Group 466257.png" alt="">
+            <img class="vec4" src="assets/images/Group 466257.png" alt="">
         </div>
 
         <div class="row mb-5 align-items-center py-5">
             <div class="col-lg-7 mb-3 mb-lg-0">
-                <h2 class="stories-main-title">
-                    Sống gắn kết<br>
-                    Kể hết chuyện nhà
+                <h2 class="stories-main-title-top">
+                    Sống gắn kết
                 </h2>
+                <h2 class="stories-main-title-bottom">Kể hết chuyện nhà</h2>
             </div>
             <div class="col-lg-5">
-                <p class="stories-desc ms-auto text-end mb-0">
+                <p class="stories-desc mb-0">
                     Series về những câu chuyện đời thường, nơi gắn kết con người với tổ ấm của chính mình, lorem dolor
                     sit amet, consectetur adipiscing elit.
                 </p>
             </div>
         </div>
 
-        <div class="row g-4 g-lg-5">
+        <div class="row g-5 g-lg-5">
 
             <div class="col-lg-4">
                 <div class="stories-col-header">
@@ -1278,22 +1414,23 @@
 
 
     <section class="newsletter-section">
-    <div class="newsletter-container">
-        <div class="newsletter-text">
-            <p>Để không bỏ lỡ các nội dung đáng đọc nhất trong tuần,<br>Living Connection có thể gửi thư cho bạn qua:</p>
+        <div class="newsletter-container">
+            <div class="newsletter-text">
+                <p>Để không bỏ lỡ các nội dung đáng đọc nhất trong tuần,<br>Living Connection có thể gửi thư cho bạn
+                    qua:</p>
+            </div>
+
+            <div class="newsletter-form-wrapper">
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Email" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Gửi</button>
+                </form>
+            </div>
         </div>
-        
-        <div class="newsletter-form-wrapper">
-            <form action="#" class="newsletter-form">
-                <input type="email" placeholder="Email" class="newsletter-input" required>
-                <button type="submit" class="newsletter-btn">Gửi</button>
-            </form>
-        </div>
-    </div>
-</section>
+    </section>
 
     <footer class="site-footer position-relative">
-        <div class="footer-bg-pattern"></div>
+        <div class="footer-bg-pattern" style="background-image: url('assets/images/Intersect.png');"></div>
 
         <div class="row align-items-center w-100 m-0 position-relative" style="z-index: 1;">
 
