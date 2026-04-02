@@ -2323,7 +2323,7 @@ a:hover .main-article-img {
 
 .news-section-decor {
     position: absolute;
-    top: 700px;
+    top: 820px;
     left: -250px;
     height: 100%;
     width: auto;
@@ -2333,6 +2333,12 @@ a:hover .main-article-img {
     z-index: -1;
     opacity: 0.5;
     user-select: none;
+}
+@media (max-width: 2424px) {
+    .news-section-decor {
+        top: 700px;
+        left: -250px;
+    }
 }
 @media (max-width: 1624px) {
     .news-section-decor {
