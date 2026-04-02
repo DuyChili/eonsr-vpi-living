@@ -15,6 +15,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
     overflow-x: hidden;
+    overflow-y: auto
 }
 
 /* ── Navbar ── */
@@ -25,7 +26,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 18px 124px;
+    padding: 18px 144px;
     background: transparent;
     transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
 }
@@ -232,7 +233,7 @@ body {
 .hero-text {
     position: absolute;
     bottom: 48px;
-    left: 124px;
+    left: 144px;
     z-index: 3;
 }
 
@@ -249,7 +250,7 @@ body {
 
 .slider-arrows {
     position: absolute;
-    right: 124px;
+    right: 144px;
     bottom: 120px;
     z-index: 3;
     display: flex;
@@ -315,7 +316,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 40px 32px 60px 124px;
+    padding: 40px 32px 60px 144px;
     box-sizing: border-box;
 }
 
@@ -535,8 +536,7 @@ body {
 
 /* ── News Section (Trước mua nhà) ── */
 .news-section {
-    padding: 40px 124px 80px 124px;
-    background-color: #fff;
+    padding: 40px 144px 80px 144px;
 }
 
 /* Header & Tabs */
@@ -760,7 +760,7 @@ body {
 
 /* ── Section Bài viết chuyên gia ── */
 .expert-section {
-    padding: 20px 124px 80px 124px;
+    padding: 20px 144px 80px 144px;
 }
 
 .expert-header {
@@ -886,7 +886,7 @@ body {
 
 /* ── Section Lá số BĐS ── */
 .laso-section {
-    padding: 60px 124px;
+    padding: 60px 144px;
     width: 100%;
 }
 
@@ -1112,7 +1112,7 @@ body {
 
 .homentor-section {
     background: linear-gradient(180deg, #C36E2B 0%, #1B0E07 100%);
-    padding: 120px 124px;
+    padding: 120px 144px;
     color: white;
     overflow: hidden;
 }
@@ -1363,7 +1363,7 @@ body {
 /* ── FOOTER SECTION ── */
 .site-footer {
     background-color: #171717;
-    padding: 80px 124px;
+    padding: 80px 144px;
     color: white;
     overflow: hidden;
 }
@@ -1483,7 +1483,7 @@ body {
 
 .stories-section {
     background: linear-gradient(-90deg, #FFE7D9 0%, rgba(255, 255, 255, 0) 50%);
-    padding: 60px 124px;
+    padding: 60px 144px;
     color: #161616;
 }
 
@@ -1872,7 +1872,7 @@ body {
 /* ── NEWSLETTER SECTION ── */
 .newsletter-section {
     width: 100%;
-    padding: 60px 124px;
+    padding: 60px 144px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
@@ -2002,7 +2002,7 @@ body {
 
     max-width: 1400px;
     margin: 0 auto;
-    padding: 40px 124px;
+    padding: 40px 144px;
     display: flex;
     gap: 0;
 }
@@ -2314,4 +2314,35 @@ a:hover .main-article-img {
     overflow: hidden;
     border-radius: 4px;
     display: block;
+}
+
+/* ── SECTION DECOR WATERMARK ── */
+.news-section--decorated {
+    position: relative;
+}
+
+.news-section-decor {
+    position: absolute;
+    top: 700px;
+    left: -250px;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: top left;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.5;
+    user-select: none;
+}
+@media (max-width: 1624px) {
+    .news-section-decor {
+        top: 600px;
+        left: -150px;
+        height: 90%;
+    }
+}
+@media (max-width: 991px) {
+    .news-section-decor {
+        display: none;
+    }
 }
