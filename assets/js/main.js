@@ -245,4 +245,55 @@ document.addEventListener('DOMContentLoaded', function () {
         dropdown.addEventListener('mouseenter', show);
         dropdown.addEventListener('mouseleave', hide);
     });
+
+
+    const overlay = document.getElementById('searchOverlay');
+    const openBtn = document.getElementById('openSearchBtn');
+    const closeBtn = document.getElementById('closeSearchBtn');
+    const field = document.getElementById('searchField');
+
+    openBtn.addEventListener('click', () => {
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => field.focus(), 300);
+    });
+
+    closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    const userWrapper = document.querySelector('.user-dropdown-wrapper');
+    const userDropdown = document.querySelector('.user-dropdown');
+
+    if (userWrapper && userDropdown) {
+        let userHideTimer = null;
+
+        const showUser = () => {
+            clearTimeout(userHideTimer);
+            userDropdown.style.opacity = '1';
+            userDropdown.style.visibility = 'visible';
+            userDropdown.style.transform = 'translateY(0)';
+        };
+
+        const hideUser = () => {
+            userHideTimer = setTimeout(() => {
+                userDropdown.style.opacity = '0';
+                userDropdown.style.visibility = 'hidden';
+                userDropdown.style.transform = 'translateY(-6px)';
+            }, 150);
+        };
+
+        userWrapper.addEventListener('mouseenter', showUser);
+        userWrapper.addEventListener('mouseleave', hideUser);
+        userDropdown.addEventListener('mouseenter', showUser);
+        userDropdown.addEventListener('mouseleave', hideUser);
+    }
 });

@@ -104,8 +104,24 @@
 
             <div class="nav-icons">
                 <i class="bi bi-heart"></i>
-                <i class="bi bi-search"></i>
-                <i class="bi bi-person-circle profile-icon"></i>
+                <i class="bi bi-search" id="openSearchBtn"></i>
+                <div class="user-dropdown-wrapper">
+                    <i class="bi bi-person-circle profile-icon"></i>
+                    <div class="user-dropdown">
+                        <a href="#" class="user-dropdown-item">
+                            <i class="bi bi-person"></i>
+                            <span>Tài khoản</span>
+                        </a>
+                        <a href="#" class="user-dropdown-item">
+                            <i class="bi bi-heart"></i>
+                            <span>Danh sách yêu thích</span>
+                        </a>
+                        <a href="#" class="user-dropdown-item user-dropdown-item--logout">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -1479,6 +1495,144 @@
     </button>
 
 
+    <div class="search-overlay" id="searchOverlay">
+ 
+        <div class="search-overlay-header">
+            <div class="search-top-row">
+                <a class="search-logo" href="#">
+                    <img height="32px" src="assets/images/Logo LVC 1 text dark.png" alt="">
+                </a>
+                <button class="search-close-btn" id="closeSearchBtn">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+ 
+            <div class="search-input-row">
+                <i class="bi bi-search"></i>
+                <input
+                    type="text"
+                    class="search-input-field"
+                    id="searchField"
+                    placeholder="Tìm kiếm bài viết"
+                    autocomplete="off"
+                >
+            </div>
+ 
+            <div class="search-popular">
+                <span class="search-popular-label">Tìm kiếm phổ biến:</span>
+                <div class="search-tags">
+                    <button class="search-tag">mua nhà</button>
+                    <button class="search-tag">bất động sản</button>
+                    <button class="search-tag">pháp lý</button>
+                    <button class="search-tag">tài chính</button>
+                    <button class="search-tag">phong thủy</button>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="search-results-area">
+            <p class="search-results-label">Nổi bật</p>
+            <div class="search-results-grid">
+ 
+                <div class="result-card">
+                    <div class="result-card-img">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="">
+                    </div>
+                    <div class="result-card-meta">
+                        <span class="result-card-source">Thị trường BĐS</span>
+                        <span class="meta-dot"></span>
+                        <span>7 phút đọc</span>
+                    </div>
+                    <p class="result-card-title">Thị trường bất động sản nhà ở biến động, các dự án chủ trọng trong năm 2025</p>
+                </div>
+ 
+                <div class="result-card">
+                    <div class="result-card-img">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="">
+                    </div>
+                    <div class="result-card-meta">
+                        <span class="result-card-source">Thị trường BĐS</span>
+                        <span class="meta-dot"></span>
+                        <span>5 phút đọc</span>
+                    </div>
+                    <p class="result-card-title">Nhìn lại thị trường bất động sản 2025: Chủ đầu tư tái định vị chiến lược</p>
+                </div>
+ 
+                <div class="result-card">
+                    <div class="result-card-img">
+                        <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80" alt="">
+                    </div>
+                    <div class="result-card-meta">
+                        <span class="result-card-source">Pháp lý</span>
+                        <span class="meta-dot"></span>
+                        <span>8 phút đọc</span>
+                    </div>
+                    <p class="result-card-title">Thị trường BĐS Hà Nội 5 năm tới: Sự chênh lệch giá giữa các quận</p>
+                </div>
+ 
+                <div class="result-card">
+                    <div class="result-card-img">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="">
+                    </div>
+                    <div class="result-card-meta">
+                        <span class="result-card-source">Mua nhà</span>
+                        <span class="meta-dot"></span>
+                        <span>10 phút đọc</span>
+                    </div>
+                    <p class="result-card-title">Những công trình kiến trúc nổi bật trong năm 2024</p>
+                </div>
+ 
+                <div class="result-card">
+                    <div class="result-card-img">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="">
+                    </div>
+                    <div class="result-card-meta">
+                        <span class="result-card-source">Tài chính</span>
+                        <span class="meta-dot"></span>
+                        <span>6 phút đọc</span>
+                    </div>
+                    <p class="result-card-title">Giải pháp tài chính thông minh khi mua nhà lần đầu cho người trẻ</p>
+                </div>
+ 
+                <div class="result-card">
+                    <div class="result-card-img">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="">
+                    </div>
+                    <div class="result-card-meta">
+                        <span class="result-card-source">Phong thủy</span>
+                        <span class="meta-dot"></span>
+                        <span>4 phút đọc</span>
+                    </div>
+                    <p class="result-card-title">Bí quyết chọn hướng nhà theo phong thủy để tài lộc vượng phát</p>
+                </div>
+ 
+                <div class="result-card">
+                    <div class="result-card-img">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="">
+                    </div>
+                    <div class="result-card-meta">
+                        <span class="result-card-source">Nhà đẹp</span>
+                        <span class="meta-dot"></span>
+                        <span>9 phút đọc</span>
+                    </div>
+                    <p class="result-card-title">Xu hướng thiết kế nội thất tối giản được ưa chuộng nhất 2025</p>
+                </div>
+ 
+                <div class="result-card">
+                    <div class="result-card-img">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="">
+                    </div>
+                    <div class="result-card-meta">
+                        <span class="result-card-source">Pháp lý</span>
+                        <span class="meta-dot"></span>
+                        <span>12 phút đọc</span>
+                    </div>
+                    <p class="result-card-title">Thủ tục mua bán nhà đất: Những điều cần biết để tránh rủi ro pháp lý</p>
+                </div>
+ 
+            </div>
+        </div>
+    </div>
     <script src="assets/js/splide.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
